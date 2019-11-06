@@ -1,0 +1,19 @@
+{
+  "name": "super-hero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx concurrently \"npx nodemon index.js\" \"browser-sync start --port 8080 --proxy \"localhost\" --startPath \"/\" --files .\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.0",
+    "livereload": "^0.8.2",
+    "nodemon": "^1.19.4"
+  }
+}

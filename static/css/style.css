@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Aladin|Caveat+Brush|Coming+Soon|Gloria+Hallelujah|Gochi+Hand|Indie+Flower|Lakki+Reddy|Merienda+One|Neucha|Permanent+Marker|Rock+Salt|Sedgwick+Ave+Display|Sunshiney&display=swap');
+
+body{
+    background-color:#fff;
+    color:#000;
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding:5em;
+}
+
+.main {
+    border: 1em solid #fff;
+    box-shadow: 15px 15px 50px 5px #888888;
+    height: 700px;
+    width: 650px;
+    position: relative;
+    left:0px;
+    top:0px;
+}
+
+.main .background{
+    content: url('/images/background.png');
+    height: 700px;
+    width: 650px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.name-placard {
+    background-image: url('/images/name-circle.png');
+    width: 800;
+    height:325;
+    display:block;
+    position: absolute;
+    top:-5em;
+    left:-6em;
+    transform: scale(0.8) rotate(-12deg);
+}
+
+.main .name-placard .background{
+    content: url('/images/name-circle.png');
+    width: 800;
+    height:325;
+}
+
+.intro {
+    text-shadow: -2px -2px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    font-size:2.5em;
+    position: absolute;
+    top:-0.5em;
+    left:-0.5em;
+    transform: rotate(8deg);
+}
+
+.name {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 6em;
+    word-wrap: none;
+    white-space: nowrap;
+    font-variant: small-caps;
+    text-shadow:  -0.085em -0.085em 0 #fff, -0.065em -0.065em 0 #fff, -0.045em -0.045em 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+
+}
+
+.hero-container {
+    position: absolute;
+    display: block;
+    bottom:-6.5em;
+    right:-10%;
+
+}
+.hero {
+    transform: scale(0.75);
+}
+
+.hero.male{
+    height:826px;
+    width:732px;
+}
+
+.hero.female{
+    height:806px;
+    width:588px;   
+}
+
+.hero img{
+    position:absolute;
+    bottom:0px;
+    right:0px;
+    border:none;
+}
+
+.hero.male img{
+    height:826px;
+    width:732px;
+}
+
+.hero.female img{
+    height:806px;
+    width:588px; 
+}
+
+
+.hero.male .outfit{
+    content: url('/images/male-outfit.png');
+    filter: hue-rotate(var(--costume-hue));
+}
+
+.hero.female .outfit{
+    content: url('/images/female-outfit.png');
+    filter: hue-rotate(var(--costume-hue));
+}
+
+.hero .hair{
+    content: var(--hair-img);
+}
+
+
+.hero .skin{
+    content: var(--skin-img);
+}
+
+h1 {
+    margin:0em;
+    font-size:1.2em;
+}
+
+.details{
+    position:absolute;
+    bottom: 2em;
+    left: 2em;
+}
+
+.details div{
+    padding: 1em;
+    background-color:#fff;
+    border: 0.25em solid #000;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+    max-width: 10em;
+}
+
+.details div span{
+    padding-left:2em;
+}
+
+.stats div {
+    padding-left:2em;
+}
