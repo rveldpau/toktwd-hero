@@ -19,5 +19,5 @@ As you modify the hero.js file the page will automatically reload and display al
 
 *Note:* This only currently works in Chrome, it did not work in Edge or Firefox.
 
-#Starting the Project
+# Starting the Project
 After running `npm install` all you need to run is `npm start`
