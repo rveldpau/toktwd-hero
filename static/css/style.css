@@ -104,14 +104,19 @@ body{
 }
 
 
+.hero .outfit {
+    filter: hue-rotate(var(--costume-hue));
+}
+.background{
+    filter: hue-rotate(var(--background-hue));
+}
+
 .hero.male .outfit{
     content: url('/images/male-outfit.png');
-    filter: hue-rotate(var(--costume-hue));
 }
 
 .hero.female .outfit{
     content: url('/images/female-outfit.png');
-    filter: hue-rotate(var(--costume-hue));
 }
 
 .hero .hair{
@@ -144,6 +149,7 @@ h1 {
 }
 
 .details div span{
+    display:inline-block;
     padding-left:2em;
 }
 

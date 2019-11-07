@@ -8,8 +8,9 @@ var heroes = (function() {
         }
         
         $(".hero").addClass(data.gender);
-        if((data.costume || {}).color){
+        if((data.costume || {}).color !== undefined){
             document.documentElement.style.setProperty("--costume-hue",data.costume.color + "deg")
+            document.documentElement.style.setProperty("--background-hue",(data.costume.color-90 < 0 ? 270 + data.costume.color : data.costume.color-90)  + "deg")
         }
 
         document.documentElement.style.setProperty("--hair-img",`url(/images/${data.gender}-hair-${data.hair}.png)`)
