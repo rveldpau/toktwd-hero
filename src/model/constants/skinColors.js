@@ -1,4 +1,4 @@
-module.exports = {
+export default ({
     light:"light",
     fair:"fair",
     medium: "medium",
@@ -7,4 +7,4 @@ module.exports = {
     brown:"brown",
     darkBrown:"dark-brown",
     black:"black"
-}
+})
