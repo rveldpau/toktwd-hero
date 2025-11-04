@@ -6,7 +6,7 @@ import skinColors from './constants/skinColors';
 
 export default ({
     //Content goes here
-    name:"The Rate-inator",
+    name:"",
     gender: genders.male,
     hair: hairColors.black,
     skin: skinColors.fair,
@@ -14,12 +14,12 @@ export default ({
         color: colors.red
     },
     stats: {
-        powers:["Making things work"],
-        weaknesses: [ "The process"]
+        powers:[],
+        weaknesses: []
     },
     associations: {
-        sidekick: "The Recreation Vehicle",
-        enemy: "Retirement"
+        sidekick: "" ,
+        enemy: ""
     }
     
 })
