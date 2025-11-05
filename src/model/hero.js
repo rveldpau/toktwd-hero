@@ -9,17 +9,18 @@ export default ({
     name:"",
     gender: genders.male,
     hair: hairColors.black,
-    skin: skinColors.fair,
+    skin: skinColors.olive,
     costume: {
-        color: colors.red
+        color: colors.purple
     },
     stats: {
         powers:[],
         weaknesses: []
     },
     associations: {
-        sidekick: "" ,
-        enemy: ""
-    }
+        //sidekick: "" ,
+        // enemy: ""
+    },
+    backstory: ""
     
 })
