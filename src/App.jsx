@@ -68,7 +68,7 @@ function App() {
       </div>
       {(hero.stats?.powers?.length > 0 && hero.name && hero.gender && hero.skin && hero.hair && hero.costume.color && hero.backstory ) && <div className='prompt'><b>Copilot Prompt:</b> 
         <span>You are a master comic character creator, the likes of Stan Lee.</span>
-        <span> Create an image of a new super-hero named {hero.name}.</span>
+        <span> Create animage of a full comic cover of a new super-hero named {hero.name}.</span>
         <span>They are {hero.gender} with {hero.skin} skin, {hero.hair} hair and primarily wear {hero.costume.color}.</span>
         {hero.stats?.powers?.length > 0 && <span>They have the following powers: {hero.stats?.powers?.join(", ")}.</span>}
         {hero.backstory && <span>And this is their backstory: {hero.backstory}</span>}
