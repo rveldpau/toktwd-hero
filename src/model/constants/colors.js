@@ -3,7 +3,8 @@ export default ({
     brown: "brown",
     green: "green",
     blue: "blue",
-    purple: "purple"
+    purple: "purple",
+    pink: "pink",
 })
 
 export const colorHue = ({
@@ -11,5 +12,6 @@ export const colorHue = ({
     brown: 60,
     green: 110,
     blue: 200,
-    purple: 280
+    purple: 280,
+    pink: 320
 })

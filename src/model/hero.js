@@ -6,21 +6,47 @@ import skinColors from './constants/skinColors';
 
 export default ({
     //Content goes here
-    name:"",
+    name: "",
     gender: genders.male,
-    hair: hairColors.black,
-    skin: skinColors.olive,
+    hair: hairColors.blonde,
+    skin: skinColors.fair,
     costume: {
-        color: colors.purple
+        color: colors.pink
     },
     stats: {
-        powers:[],
+        powers: [],
         weaknesses: []
     },
     associations: {
-        //sidekick: "" ,
-        // enemy: ""
+        sidekick: {
+            name: "",
+            gender: genders.female,
+            hair: hairColors.blonde,
+            skin: skinColors.fair,
+            costume: {
+                color: colors.purple
+            },
+            stats: {
+                powers: [],
+                weaknesses: []
+            },
+            backstory: ""
+        },
+        enemy: {
+            name: "",
+            gender: genders.male,
+            hair: hairColors.blonde,
+            skin: skinColors.fair,
+            costume: {
+                color: colors.blue
+            },
+            stats: {
+                powers: [],
+                weaknesses: []
+            },
+            backstory: ""
+        },
     },
     backstory: ""
-    
+
 })

@@ -1,4 +1,5 @@
 import './App.css'
+import CopilotPrompt from './CopilotPrompt';
 import { colorHue } from './model/constants/colors'
 import hero from './model/hero'
 
@@ -46,14 +47,14 @@ function App() {
             </div>
             }
             <span class="associations">
-              {hero.associations?.sidekick && <div class="sidekick-container">
+              {hero.associations?.sidekick?.name && <div class="sidekick-container">
                 <h1>Sidekick</h1>
-                <span class="sidekick">{hero.associations.sidekick}</span>
+                <span class="sidekick">{hero.associations.sidekick?.name}</span>
               </div>
               }
-              {hero.associations?.enemy && <div class="enemy-container">
+              {hero.associations?.enemy?.name && <div class="enemy-container">
                 <h1>Arch-Nemesis</h1>
-                <span class="enemy">{hero.associations.enemy}</span>
+                <span class="enemy">{hero.associations.enemy?.name}</span>
               </div>
               }
             </span>
@@ -69,9 +70,9 @@ function App() {
       {(hero.stats?.powers?.length > 0 && hero.name && hero.gender && hero.skin && hero.hair && hero.costume.color && hero.backstory ) && <div className='prompt'><b>Copilot Prompt:</b> 
         <span>You are a master comic character creator, the likes of Stan Lee.</span>
         <span> Create animage of a full comic cover of a new super-hero named {hero.name}.</span>
-        <span>They are {hero.gender} with {hero.skin} skin, {hero.hair} hair and primarily wear {hero.costume.color}.</span>
-        {hero.stats?.powers?.length > 0 && <span>They have the following powers: {hero.stats?.powers?.join(", ")}.</span>}
-        {hero.backstory && <span>And this is their backstory: {hero.backstory}</span>}
+        <CopilotPrompt target={hero} />
+        {hero.associations.sidekick && <><span>{hero.name} has a sidekick named {hero.associations.sidekick.name}.</span><CopilotPrompt target={hero.associations.sidekick} /></>}
+        {hero.associations.enemy && <><span>{hero.name} has an arch-nemisis named {hero.associations.enemy.name}.</span><CopilotPrompt target={hero.associations.enemy} /></>}
       </div> }
     </>
   )
