@@ -17,49 +17,49 @@ function App() {
 
   return (
     <>
-      <div class="main">
-        <img class="background" />
-        <div class="name-placard">
-          <img class="background" />
-          <span class="intro">Introducing...</span>
-          <span class="name">
+      <div className="main">
+        <img className="background" />
+        <div className="name-placard">
+          <img className="background" />
+          <span className="intro">Introducing...</span>
+          <span className="name">
             {hero.name}
           </span>
         </div>
-        <div class="hero-container">
-          <div class={`hero ${hero.gender}`}>
-            <img class="skin" />
-            <img class="hair" />
-            <img class="outfit" />
+        <div className="hero-container">
+          <div className={`hero ${hero.gender}`}>
+            <img className="skin" />
+            <img className="hair" />
+            <img className="outfit" />
           </div>
         </div>
         {(hero.stats?.powers?.length > 0 || hero.stats?.weaknesses?.length > 0 || hero.associations?.sidekick || hero.associations?.enemy) &&
-          <div class="details">
-            {(hero.stats?.powers?.length > 0 || hero.stats?.weaknesses?.length > 0) && <div class="stats">
+          <div className="details">
+            {(hero.stats?.powers?.length > 0 || hero.stats?.weaknesses?.length > 0) && <div className="stats">
               {hero.stats?.powers?.length > 0 && <>
                 <h1>Powers</h1>
-                <span class="powers">{hero.stats.powers.join(", ")}</span>
+                <span className="powers">{hero.stats.powers.join(", ")}</span>
               </>}
               {hero.stats?.weaknesses?.length > 0 && <>
                 <h1>Weaknesses</h1>
-                <span class="weaknesses">{hero.stats.weaknesses.join(", ")}</span>
+                <span className="weaknesses">{hero.stats.weaknesses.join(", ")}</span>
               </>}
             </div>
             }
-            <span class="associations">
-              {hero.associations?.sidekick?.name && <div class="sidekick-container">
+            <span className="associations">
+              {hero.associations?.sidekick?.name && <div className="sidekick-container">
                 <h1>Sidekick</h1>
-                <span class="sidekick">{hero.associations.sidekick?.name}</span>
+                <span className="sidekick">{hero.associations.sidekick?.name}</span>
               </div>
               }
-              {hero.associations?.enemy?.name && <div class="enemy-container">
+              {hero.associations?.enemy?.name && <div className="enemy-container">
                 <h1>Arch-Nemesis</h1>
-                <span class="enemy">{hero.associations.enemy?.name}</span>
+                <span className="enemy">{hero.associations.enemy?.name}</span>
               </div>
               }
             </span>
             {hero.backstory &&
-              <div class="backstory">
+              <div className="backstory">
                 {hero.backstory}
               </div>
             }
@@ -71,8 +71,8 @@ function App() {
         <span>You are a master comic character creator, the likes of Stan Lee.</span>
         <span> Create animage of a full comic cover of a new super-hero named {hero.name}.</span>
         <CopilotPrompt target={hero} />
-        {hero.associations.sidekick && <><span>{hero.name} has a sidekick named {hero.associations.sidekick.name}.</span><CopilotPrompt target={hero.associations.sidekick} /></>}
-        {hero.associations.enemy && <><span>{hero.name} has an arch-nemisis named {hero.associations.enemy.name}.</span><CopilotPrompt target={hero.associations.enemy} /></>}
+        {hero.associations.sidekick?.name && <><span>{hero.name} has a sidekick named {hero.associations.sidekick.name}.</span><CopilotPrompt target={hero.associations.sidekick} /></>}
+        {hero.associations.enemy?.name && <><span>{hero.name} has an arch-nemisis named {hero.associations.enemy.name}.</span><CopilotPrompt target={hero.associations.enemy} /></>}
       </div> }
     </>
   )
