@@ -67,13 +67,7 @@ function App() {
         }
 
       </div>
-      {(hero.stats?.powers?.length > 0 && hero.name && hero.gender && hero.skin && hero.hair && hero.costume.color && hero.backstory ) && <div className='prompt'><b>Copilot Prompt:</b> 
-        <span>You are a master comic character creator, the likes of Stan Lee.</span>
-        <span> Create animage of a full comic cover of a new super-hero named {hero.name}.</span>
-        <CopilotPrompt target={hero} />
-        {hero.associations.sidekick?.name && <><span>{hero.name} has a sidekick named {hero.associations.sidekick.name}.</span><CopilotPrompt target={hero.associations.sidekick} /></>}
-        {hero.associations.enemy?.name && <><span>{hero.name} has an arch-nemisis named {hero.associations.enemy.name}.</span><CopilotPrompt target={hero.associations.enemy} /></>}
-      </div> }
+      {(hero.stats?.powers?.length > 0 && hero.name && hero.gender && hero.skin && hero.hair && hero.costume?.color && hero.backstory) && <CopilotPrompt hero={hero} />}
     </>
   )
 }

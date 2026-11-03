@@ -6,7 +6,7 @@ import skinColors from './constants/skinColors';
 
 export default ({
     //Content goes here
-    name: "",
+    name: "Guy",
     gender: genders.male,
     hair: hairColors.blonde,
     skin: skinColors.fair,
@@ -14,12 +14,12 @@ export default ({
         color: colors.pink
     },
     stats: {
-        powers: [],
-        weaknesses: []
+        powers: ["Stuff"],
+        weaknesses: ["Such"]
     },
     associations: {
         sidekick: {
-            name: "",
+            name: "Boy",
             gender: genders.female,
             hair: hairColors.blonde,
             skin: skinColors.fair,
@@ -27,14 +27,14 @@ export default ({
                 color: colors.purple
             },
             stats: {
-                powers: [],
-                weaknesses: []
+                powers: ["More stuff"],
+                weaknesses: ["Less such"]
             },
             backstory: ""
         },
         enemy: {
-            name: "",
-            gender: genders.male,
+            name: "Amazing Girl",
+            gender: genders.female,
             hair: hairColors.blonde,
             skin: skinColors.fair,
             costume: {
@@ -47,6 +47,6 @@ export default ({
             backstory: ""
         },
     },
-    backstory: ""
+    backstory: "When a mutant attacked this alien, he turned into a... human guy!"
 
 })
