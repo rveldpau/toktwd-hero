@@ -110,7 +110,7 @@ z-index: 1000;
 
 
 .hero .outfit {
-    filter: hue-rotate(var(--costume-hue));
+    filter: var(--costume-filter);
 }
 
 .background {

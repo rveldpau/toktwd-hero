@@ -1,13 +1,13 @@
 import './App.css'
 import CopilotPrompt from './CopilotPrompt';
-import { colorHue } from './model/constants/colors'
+import { colorHue, costumeFilter } from './model/constants/colors'
 import hero from './model/hero'
 
 function App() {
 
   if ((hero.costume || {}).color !== undefined) {
     const costumeColor = colorHue[hero.costume.color];
-    document.documentElement.style.setProperty("--costume-hue", costumeColor + "deg")
+    document.documentElement.style.setProperty("--costume-filter", costumeFilter(hero.costume.color))
     document.documentElement.style.setProperty("--background-hue", (costumeColor - 90 < 0 ? 270 + costumeColor : costumeColor - 90) + "deg")
   }
 

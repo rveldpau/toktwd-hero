@@ -36,3 +36,8 @@ As you modify the hero.js file the page will automatically reload and display al
 
 #Starting the Project
 After running `npm install` all you need to run is `npm run dev`
+
+# Facilitator Materials
+With `npm run dev` running:
+* `/stories.html` - printable story cards to cut out for the scrum board (Letter, 100% scale, background graphics on).
+* `/options.html` - every gender, hair, skin and costume choice the app can draw, with the exact text to put in `hero.js`. Leave this on screen while the kids work.
